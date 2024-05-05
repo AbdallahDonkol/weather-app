@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- ^fav icon -->
+    <link rel="icon" href="imgs/weather-img.jpg">
+    <!-- ^bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ^font awesome library-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- ^main css file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="weather-container">
+        <div class="site-banner">
+            <div class="container">
+                    <input type="search" id="search" placeholder="Find your location...">
+            </div>
+        </div>
+        <div class="site-forecast">
+            <div class="container">
+                <div class="row">
+                    <div class="site-forecast-content d-flex">
+                        <!-- today forecast section -->
+                        <div class="today-forecast col-sm-12 col-md-4 bg-sec-color pb-4 text-light g-0">
+                            <div class="today-forecast-header d-flex justify-content-between px-2 py-2 bg-light-header-color">
+                                <p id="today-dayName" class="mb-0"></p>
+                                <span>
+                                    <span id="today-dayNum"></span>
+                                    <span id="today-monthName"></span>
+                                </span>
+                            </div>
+                            <div class="today-forecast-content px-4 py-4">
+                                <p id="today-location" class="fs-4"></p>
+                                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                    <span class="num">
+                                        <span id="today-temp"></span>
+                                        <span><sup>o</sup>C</span>
+                                    </span>
+                                    <img id="today-img" src="imgs/sunny-img.webp" width="90" alt="weather image">
+                                </div>
+                                <p id="today-condition" class="my-2 blue-color"></p>
+                            </div>
+                            <div class="today-forecast-footer px-4 d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img class="me-2" src="imgs/icon-umberella.png" alt="umbrella image">
+                                    <p id="today-humidity" class="mb-0">20</p><span>%</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img class="me-2" src="imgs/icon-wind.png" alt="wind image">
+                                    <p id="today-wind" class="mb-0">18</p><span>Km/h</span>
+                                </div>
+                                <div class="d-flex  align-items-center">
+                                    <img class="me-2" src="imgs/icon-compass.png" alt="compass image">
+                                    <p id="today-wind-dir" class="mb-0">East</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tomorrow forecast section -->
+                        <div class="tomorrow-forecast col-sm-12 col-md-4 bg-main-color pb-4 text-center text-light g-0">
+                            <div class="tomorrow-forecast-header bg-dark-header-color py-2">
+                                <p class="next-dayName mb-0"></p>
+                            </div>
+                            <div class="tomorrow-forecast-content pt-5">
+                                <div>
+                                    <img class="next-img" src="imgs/sunny-img.webp" alt="">
+                                    <div class="mt-3">
+                                        <span class="fs-3 fw-bold">
+                                            <span class="next-maxTemp"></span>
+                                            <span><sup>o</sup>C</span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <span class="next-minTemp text-secondary"></span>
+                                            <span class="text-secondary"><sup>o</sup>C</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="next-condition mt-5 blue-color"></p>
+                        </div>
+                        <!-- after tomorrow forecast section -->
+                        <div class="afterTomorrow-forecast col-sm-12 col-md-4 bg-sec-color pb-4 text-center text-light g-0">
+                            <div class="afterTomorrow-forecast-header px-2 py-2 bg-light-header-color">
+                                <p class="next-dayName mb-0"></p>
+                            </div>
+                            <div class="afterTomorrow-forecast-content pt-5">
+                                <div>
+                                    <img class="next-img" src="imgs/sunny-img.webp" alt="">
+                                    <div class="mt-3">
+                                        <span class="fs-3 fw-bold">
+                                            <span class="next-maxTemp"></span>
+                                            <span><sup>o</sup>C</span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <span class="next-minTemp text-secondary"></span>
+                                            <span class="text-secondary"><sup>o</sup>C</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="next-condition mt-5 blue-color"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="py-5">
+            <div class="container">
+                <div class="row align-items-center gy-3">
+                    <div class="col-md-8">
+                        <form>
+                            <input type="email" placeholder="Enter your email to subscribe...">
+                            <button>Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="col-md-2 offset-md-1">
+                        <div class="social-icons d-flex justify-content-center">
+                            <a class="d-flex justify-content-center align-items-center text-decoration-none bg-main-color p-3 me-1 rounded-circle" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f blue-color fs-6 fa-fw"></i></a>
+                            <a class="d-flex justify-content-center align-items-center text-decoration-none bg-main-color p-3 me-1 rounded-circle" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter blue-color fs-6 fa-fw"></i></a>
+                            <a class="d-flex justify-content-center align-items-center text-decoration-none bg-main-color p-3 me-1 rounded-circle" href="https://www.support.google.com" target="_blank"><i class="fa-brands fa-google-plus-g blue-color fs-6 fa-fw"></i></a>
+                            <a class="d-flex justify-content-center align-items-center text-decoration-none bg-main-color p-3 me-1 rounded-circle" href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest blue-color fs-6 fa-fw"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="my-4 text-secondary">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
